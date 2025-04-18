@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# Kutubxona Qidiruv Tizimi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O'zbekistonda mavjud kutubxonalardan kitob qidirish tizimi. Foydalanuvchilar qidirayotgan kitob qaysi kutubxonada borligini topa olishi va eng yaqin kutubxonani aniqlashi mumkin.
 
-Currently, two official plugins are available:
+## Xususiyatlar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Kitob qidirish
+- Kutubxonalar ro'yxati
+- Kutubxona profili
+- Kitob qo'shish
+- Eng yaqin kutubxonani topish
+- Foydalanuvchi autentifikatsiyasi
 
-## Expanding the ESLint configuration
+## Texnologiyalar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- React Router
+- CSS Modules
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## O'rnatish
+
+1. Loyihani klonlang:
+```bash
+git clone [repository-url]
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Loyiha papkasiga o'ting:
+```bash
+cd library-search-system
 ```
+
+3. Zarur paketlarni o'rnating:
+```bash
+npm install
+```
+
+4. Loyihani ishga tushiring:
+```bash
+npm run dev
+```
+
+## Foydalanish
+
+1. Tizimga kiring yoki ro'yxatdan o'ting
+2. Kitob qidirish uchun bosh sahifadagi qidiruv maydonidan foydalaning
+3. Kutubxonalar ro'yxatini ko'rish uchun "Kutubxonalar" bo'limiga o'ting
+4. Yangi kitob qo'shish uchun "Kitob Qo'shish" bo'limidan foydalaning
+
+## Loyiha Tuzilishi
+
+```
+src/
+  ├── components/
+  │   ├── Navbar.tsx
+  │   ├── Login.tsx
+  │   ├── Register.tsx
+  │   ├── Home.tsx
+  │   ├── About.tsx
+  │   ├── LibraryList.tsx
+  │   ├── LibraryDetail.tsx
+  │   ├── LibraryProfile.tsx
+  │   └── AddBooks.tsx
+  ├── styles/
+  │   └── global.css
+  ├── App.tsx
+  └── main.tsx
+```
+
+## Muallif
+
+[Ismingiz]
+
+## Litsenziya
+
+MIT
